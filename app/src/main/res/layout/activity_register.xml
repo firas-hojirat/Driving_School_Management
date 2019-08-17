@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
+    tools:context=".activities.RegisterActivity"
     tools:layout_editor_absoluteY="81dp">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/idEditText"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
@@ -21,89 +22,92 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.446"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/firstNameEditText"
         android:layout_width="300dp"
         android:layout_height="45dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/first_name"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/idEditText"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        tools:layout_editor_absoluteY="67dp" />
+        app:layout_constraintStart_toStartOf="@+id/idEditText"
+        app:layout_constraintTop_toBottomOf="@+id/idEditText" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/lastNameEditText"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/Last_name"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        app:layout_constraintEnd_toEndOf="@+id/firstNameEditText"
         app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintStart_toStartOf="@+id/firstNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameEditText" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/phoneNumberEditText"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/Phone_number"
         android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="@+id/editText3"
+        app:layout_constraintEnd_toEndOf="@+id/lastNameEditText"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintStart_toStartOf="@+id/lastNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameEditText" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/regionEditText"
         android:layout_width="300dp"
         android:layout_height="45dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/Region"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editText4"
+        app:layout_constraintEnd_toEndOf="@+id/phoneNumberEditText"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText4"
-        tools:layout_editor_absoluteY="236dp" />
+        app:layout_constraintStart_toStartOf="@+id/phoneNumberEditText"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberEditText" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/passwordEditText"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editText5"
+        app:layout_constraintEnd_toEndOf="@+id/regionEditText"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText5"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintStart_toStartOf="@+id/regionEditText"
+        app:layout_constraintTop_toBottomOf="@+id/regionEditText" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/confirmPasswordEditText"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/Confirm_password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editText6"
+        app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText6"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintStart_toStartOf="@+id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="@string/Register"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="432dp" />
+        app:layout_constraintEnd_toEndOf="@+id/confirmPasswordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordEditText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,4 +10,5 @@
     <string name="Region">Region</string>
     <string name="Confirm_password">confirm password</string>
     <string name="Register">Register</string>
+    <string name="login">Login</string>
 </resources>
